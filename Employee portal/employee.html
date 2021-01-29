@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Employee Portal</title>
+</head>
+<body >
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">Employee Portal</a>
+    </nav>
+    <!-- <div class="container mt-3 text-center">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-success" data-toggle="modal" data-target="#add-employee-modal">Add Employee</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="add-employee-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="model-header bg-success text-white">
+                    <h3 class="modal-title">Add employee
+                    <button class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </h3>
+                </div>
+                <div class="modal-body bg-light">
+                    <form id="add-employee-form" onsubmit="addEmployeeForm()">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <span class="text-danger">*</span>
+                            <input required type="text" class="form-control" id="name" placeholder="Enter username" name="name">
+                            <div id="nameError" class="errorMsg"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <span class="text-danger">*</span>
+                            <input required type="email" class="form-control" id="email" placeholder="Enter email" name="email" >
+                            <div id="emailError" class="errorMsg" ></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Password</label>
+                            <span class="text-danger">*</span>
+                            <input  type="password" class="form-control" id="password" placeholder="Enter password" name="password" >
+                            <div id="pwdError" class="errorMsg" ></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Phone</label>
+                            <span class="text-danger">*</span>
+                            <input required type="number" class="form-control" id="phone" placeholder="Enter Phone number" name="phone" >
+                            <div id="phoneError" class="errorMsg"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <span class="text-danger">*</span>
+                            <select required id="location" name="location" class="form-control" >
+                            <option value> --Select location--</option> 
+                            <option value="mumbai"> Mumbai </option> 
+                            <option value="bangalore"> Bangalore </option> 
+                            <option value='mysore'> Mysore </option> 
+                            <option value="chennai"> Chennai </option> 
+                            </select>
+                        </div>
+                        <div>
+                            <input type="submit" value="Add" class="btn btn-success">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+
+    <div class="modal" id="update-employee-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="model-header bg-success text-white">
+                    <h3 class="modal-title">Update employee
+                    <button class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </h3>
+                </div>
+                <div class="modal-body bg-light">
+                    <form id="add-employee-form" onsubmit="updateEmployeeForm()">
+                        <div class="form-group">
+                            <label for="name">Employee ID</label>
+                            <span class="text-danger">*</span>
+                            <input required disabled type="text" class="form-control" id="update-emp-Id" placeholder="Employee ID" name="name">
+                            <div id="nameError" class="errorMsg"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <span class="text-danger">*</span>
+                            <input required type="text" class="form-control" id="update-name" placeholder="Name" name="name">
+                            <div id="nameError" class="errorMsg"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <span class="text-danger">*</span>
+                            <input required disabled type="email" class="form-control" id="update-email" placeholder="Email" name="email" >
+                            <div id="emailError" class="errorMsg" ></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Password</label>
+                            <span class="text-danger">*</span>
+                            <input  required disabled type="password" class="form-control" id="update-password" placeholder="Enter password" name="password" >
+                            <div id="pwdError" class="errorMsg" ></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Phone</label>
+                            <span class="text-danger">*</span>
+                            <input required type="number" class="form-control" id="update-phone" placeholder=" Phone number" name="phone" >
+                            <div id="phoneError" class="errorMsg"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <span class="text-danger">*</span>
+                            <select required id="update-location" name="location" class="form-control" >
+                            <option value> --Select location--</option> 
+                            <option value="Mumbai"> Mumbai </option> 
+                            <option value="Bangalore"> Bangalore </option> 
+                            <option value='Mysore'> Mysore </option> 
+                            <option value="Chennai"> Chennai </option> 
+                            <option value="Baroda"> Baroda </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="qualification">Qualification</label>
+                            <input type="radio" id="update-postGraduate" name="update-qualification"  value="Post-Graduate" > Post Graduate 
+                            <input type="radio"  id="update-underGraduate" name="update-qualification" value="Under-Graduate" > Under Graduate
+                        </div>
+                        <div class="form-group" id="hid" >
+                            <label for="specialization" >Specialization</label>
+                            <input type="text" class="form-control" id="update-specialization" placeholder="Enter Specalization" name="specialization" onChange="validateSpecialization()">
+                        </div>
+                        <div>
+                            <input type="submit" value="Update" class="btn btn-success">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover text-center table-secondary table-stripped">
+                    <thead class="bg-secondary text-white">
+                        <tr>
+                            <th>EMP ID</th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>PASSWORD</th>
+                            <th>PHONE</th>
+                            <th>LOCATION</th>
+                            <th>QUALIFICATION</th>
+                            <th>SPECIALIZATION</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body" >
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./employee.js"></script>  
+</body>
+</html>

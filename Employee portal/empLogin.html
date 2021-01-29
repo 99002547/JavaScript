@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Employee Portal</title>
+    <script>
+        function loginEmployeeForm(){
+            var userName=document.getElementById("lname").value
+            var password=document.getElementById("password").value
+            if(userName=="shilpa@gmail.com" && password=="shilpa@123")
+            {
+                window.location.href="employee.html"
+                alert("login")
+            }
+            else
+            {
+                alert("invalid UserName or Password")
+            }
+        }
+    </script>  
+</head>
+<body >
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">Employee Portal</a>
+    </nav>
+    <div class="container mt-3 text-center">
+        <form id="add-employee-form" method="POST" >
+            <div class="form-group">
+                <label for="name">User name</label>
+                <span class="text-danger">*</span>
+                <input required type="text" class="form-control" id="lname" placeholder="Enter username" name="name">
+                <div id="nameError" class="errorMsg"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">password</label>
+                <span class="text-danger">*</span>
+                <input required type="password" class="form-control" id="password" placeholder="Enter password" name="password" >
+                <div id="pwdError" class="errorMsg" ></div>
+            </div>
+            <div>
+                <input type="submit" value="Login" class="btn btn-success" onclick="loginEmployeeForm()">
+            </div>
+        </form>
+    </div>   
+</body>
+</html>
